@@ -6,6 +6,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import ExpenseTracker from '@/components/Expensetracker';
 
 export default function TabTwoScreen() {
   return (
@@ -19,6 +20,7 @@ export default function TabTwoScreen() {
           style={styles.headerImage}
         />
       }>
+      <ExpenseTracker />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
