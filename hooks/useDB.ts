@@ -1,7 +1,8 @@
 // src/hooks/useExpenses.js
 import { useState, useEffect } from 'react';
 import db from "../db/base";
-const { init, select, insert } = db;
+import { DB_KEY } from '@/db/map';
+const { init, select, insert } = db(DB_KEY.TRANSACTION);
 
 export const useExpenses = () => {
   const [expenses, setExpenses] = useState<Record<string,unknown>[]>([]);
