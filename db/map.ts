@@ -95,6 +95,7 @@ export const DB_CREATE = {
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
         icon VARCHAR(255),
+        type INT NOT NULL,
         is_daily_spending BOOLEAN DEFAULT TRUE
     )`,
     [DB_KEY.TRANSACTION]: `CREATE TABLE IF NOT EXISTS transactions (

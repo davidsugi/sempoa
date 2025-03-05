@@ -23,7 +23,7 @@ export const useExpenses = () => {
 
   const addExpense = async (props:{amount: number, category:string, date?: Date}) => {
     try {
-        let value =[props.amount, props.category, `"${(props.date ?? new Date()).toISOString()}"`];
+        let value =[props.amount, `"${props.category}"`, `"${(props.date ?? new Date()).toISOString()}"`];
       await insert(value);
       await loadExpenses(); // refresh the list after insertion
     } catch (err) {

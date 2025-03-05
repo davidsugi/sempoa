@@ -36,7 +36,7 @@ const sqldb = (tableKey: DB_KEY) => {
       return Promise.resolve();
     }
     if (db) {
-      return db.withTransactionSync(async () => {
+        console.log(value.join(","))
         try {
           await db.runAsync(
             `INSERT INTO expenses (amount, category, date) VALUES (${value.join(",")});`,
@@ -46,7 +46,6 @@ const sqldb = (tableKey: DB_KEY) => {
           console.error('Error adding expense', e);
           return false;
         }
-      });
     }
   };
 
