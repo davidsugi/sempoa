@@ -13,10 +13,16 @@ export interface User {
   }
   
   // Categories table
+
+  export enum CategoryType {
+    Expense,
+    Income,
+  }
   export interface Category {
     id: number;
     name: string;
     icon?: string;
+    type: CategoryType,
     isDailySpending: boolean;
   }
   
